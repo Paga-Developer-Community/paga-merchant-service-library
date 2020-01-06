@@ -87,29 +87,6 @@ class PagaMerchantServiceClient {
     }
 
     /**
-     * @param string $invoice_number
-     *               invoice number of the transaction.
-     * @return JSON Object with transaction details
-     */
-    public function getTransactionDetailsByInvoiceNumber($invoice_number){
-
-        $server = ($this->test) ? $this->test_server : $this->live_server;
-        $url = $server."/paga-webservices/merchant-rest/secured/getTransactionDetailsByInvoiceNumber";
-        $data = array(
-            'invoiceNumber'=>$invoice_number
-        );
-
-        $hash_string = $invoice_number.$this->apiKey;
-
-        $hash = hash('sha512', $hash_string);
-
-        $curl = $this->buildRequest($url, $hash, $data);
-        $response = curl_exec($curl);
-        $this->checkCURL($curl);
-        return $response;
-    }
-
-    /**
      * @param string $processCode
      *               The process code of the transaction
      * @return JSON Object with process details
