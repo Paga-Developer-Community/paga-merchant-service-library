@@ -1,4 +1,4 @@
-# PagaMerchant Nodejs API Library v1.0.0
+# Paga Merchant PHP API Library v1.0.0
 
 ## Merchant Services exposed by the library
 
