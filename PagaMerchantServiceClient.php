@@ -3,7 +3,7 @@
 
 class PagaMerchantServiceClient {
 
-    var $test_server = "https://qa1.mypaga.com"; //"http://localhost:8080"
+    var $test_server = "https://beta.mypaga.com"; //"http://localhost:8080"
     var $live_server = "https://www.mypaga.com";
 
 
@@ -215,6 +215,31 @@ class PagaMerchantServiceClient {
         $this->checkCURL($curl);
         return $response;
     }
+
+
+        /**
+     * @param string $referenceNumber
+     *              The unique reference number provided as part of the original transaction which identifies the transaction to be refunded
+     * @return JSON Object with transaction details
+     */
+    public function getTransactionDetailsByMerchantReferenceNumber($merchantReference){
+
+        $server = ($this->test) ? $this->test_server : $this->live_server;
+        $url = $server."/paga-webservices/merchant-rest/secured/getTransactionDetailsByMerchantReference";
+        $data = array(
+            'merchantReference'=>$merchantReference,
+        );
+
+        $hash_string = $merchantReference.$this->apiKey;
+
+        $hash = hash('sha512', $hash_string);
+
+        $curl = $this->buildRequest($url, $hash, $data);
+        $response = curl_exec($curl);
+        $this->checkCURL($curl);
+        return $response;
+    }
+
 
     /**
      * @param $curl
