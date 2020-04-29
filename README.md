@@ -81,5 +81,5 @@ $response=$merchantServiceClient -> refundBillPay('<reference_Number>','<refund_
 This service allows the merchant to verify the status and details of an executed transaction or to determine if a transaction was indeed executed on the system using the merchant reference number. Merchant aggregators checking for transaction status across multiple users should use this method.
 
 ```
-$response=$merchantServiceClient -> etTransactionDetailsByMerchantReference('<merchantReference>');
+$response=$merchantServiceClient -> getTransactionDetailsByMerchantReference('<merchantReference>');
 ```
