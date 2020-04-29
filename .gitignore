@@ -1,0 +1,6 @@
+vendor
+.env
+sampleCode.php
+composer.lock
+
+
