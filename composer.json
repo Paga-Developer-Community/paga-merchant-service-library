@@ -1,0 +1,14 @@
+{
+    "name": "paga/paga-merchant",
+    "description": "The PAGA Merchant API platform exposes operations that are useful for Merchants to provide PAGA’s services to themselves or third-party clients.",
+    "authors": [
+        {
+            "name": "PagaDevComm",
+            "email": "devcomm@paga.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.2"
+    }
+}
