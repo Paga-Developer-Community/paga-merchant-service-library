@@ -1,12 +1,31 @@
 {
     "name": "paga/paga-merchant",
     "description": "The PAGA Merchant API platform exposes operations that are useful for Merchants to provide PAGA’s services to themselves or third-party clients.",
-    "authors": [
-        {
+    "authors": [{
             "name": "PagaDevComm",
             "email": "devcomm@paga.com"
+        },
+
+        {
+            "name": "Nwabuokei Nnamdi",
+            "email": "nnwabuokei@paga.com",
+            "role": "Software Engineer"
+
         }
     ],
+    "support": {
+        "issues": "https://github.com/pagadevcomm/paga-merchant-service-library/issues"
+    },
+    "license": "MIT",
+    "config": {
+        "platform": {
+            "php": "7.2.29"
+        },
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+
+    "type": "library",
     "minimum-stability": "dev",
     "require": {
         "php": "^7.2"
