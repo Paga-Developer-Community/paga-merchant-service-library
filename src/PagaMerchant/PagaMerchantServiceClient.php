@@ -13,7 +13,7 @@
  * @link      https://packagist.org/packages/paga/paga-merchant
  */
 
-namespace PagaMerchant\PagaMerchantServiceClient;
+namespace PagaMerchant;
 
 /**
  * Parses and verifies the doc comments for files.
